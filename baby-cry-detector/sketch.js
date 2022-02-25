@@ -1,4 +1,4 @@
-
+try{
 
 
 let mic;
@@ -21,7 +21,7 @@ function draw(){
   if(mic){
   micLevel = mic.getLevel();
   if(micLevel>0.15){
-    console.log(`baby is crying!!!${msgNum}`);
+//     console.log(`baby is crying!!!${msgNum}`);
     msgNum+=1;
     console.log(msgNum)
   }
@@ -32,4 +32,4 @@ function draw(){
   }
   fill(0)
   text('Monitor', width/2, height/2);
-}
+}}catch(e){console.log(e.toString())}
