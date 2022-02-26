@@ -1,26 +1,23 @@
-<html>
-  <head>
-    <script src="p5/p5.js"></script>
-    <script src="p5/addons/p5.sound.js"></script>
-    <script src="sketch.js"></script>
-  </head>
-  <body>
-    <main>
-
-      <script>
-        console.log=(str)=>{
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>qwerty</title>
+<script src="https://unpkg.com/wavesurfer.js"></script>
+<script src="microphone-min.js"></script>
+<script src="script.js"></script>
+<script>
+console.log=(str)=>{
+    let ul=document.querySelector("ul")
     let li=document.createElement("li")
-    li.textContent=str;
-    document.querySelector(".logger").appendChild(li)
-  }
-  
-      </script>
-
-
-      
-    </main>
-    <ul class="logger">
-      <li></li>
-    </ul>
-  </body>
+    li.textContent=str
+    ul.appendChild(li)
+}
+</script>
+</head>
+<body>
+    <ul></ul>
+</body>
 </html>
