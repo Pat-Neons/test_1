@@ -116,11 +116,25 @@ class Microphone{
         return volume
     }
 }
+
+let spikesIn5Secs=0
+setInterval(()=>{
+    if(spikesIn5Secs>7){
+        alert("Baby is Crying!")
+    }
+},5000)
+
+
+
 let a=new Microphone()
 setInterval(()=>{
     let b=a.getVolume()
-    if(b>0.09)console.log("baby is crying");
+    if(b>0.09){
+        console.log("spike in volume")
+        spikesIn5Secs+=1    
+    };
 },50)
+
 
 
 
